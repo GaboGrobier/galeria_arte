@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Galeria de Arte </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+  </head>
+</head>
+<body>
+    <div id="principal">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">Galeria de Arte</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Inicio</a></li>
+                <li><a href="#">Obras</a></li>
+                <li><a href="#">Artiistas</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Registrarse</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Iniciar Sesion</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" action="/action_page.php">
+                <div class="form-group">
+                <input type="text" class="form-control" placeholder="Buscar Artista u Obra ">
+                </div>
+                <button type="submit" class="btn btn-default">Buscar</button>
+            </form>
+            </div>
+        </nav>
+        <!--Carrusel de fotos -->
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+          
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+              <div class="item active">
+                    <div class="imagenes">
+                        <img src="img-01.jpg" alt="artista1">
+                    </div>
+              </div>
+          
+              <div class="item">
+                  < <div class="imagenes">
+                    <img src="img2.jpg" alt="artista2">
+                </div>
+                
+              </div>
+          
+              <div class="item">
+                <div class="imagenes">
+                    <img src="img3.jpg" alt="artista3">
+                </div>
+            </div>
+            </div>
+          
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+          <div>
+              <hr class="linea1">
+            </div>
+            <div class="artista">
+                <!--Artistas destacados -->
+               <h1> Artistas Destacados </h1>
+              </div>
+
+
+            <!--Imagenes de artistas -->
+              
+            <div id="imagenes_artista">
+                  
+            <div class="row">
+                <div class="col-md-4">
+                  <div class="thumbnail" style="width: 70%;">
+                    <a href="art1.jpg">
+                      <img src="art1.jpg" alt="Lights" style="width: 100%">
+                      <div class="caption">
+                        <p>Lorem ipsum...</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="thumbnail" style="width: 70%;">
+                    <a href="art2.jpg">
+                      <img src="art2.jpg" alt="Nature" style="width:100%">
+                      <div class="caption">
+                        <p>Lorem ipsum...</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="thumbnail" style="width: 70%;">
+                    <a href="art3.jpg">
+                      <img src="art3.jpg" alt="Fjords" style="width:100% ">
+                      <div class="caption">
+                        <p>Lorem ipsum...</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                </div>
+                <div>
+                    <hr class="linea2">
+                  </div>
+                </div>
+                <div class="quienesomos">
+                        <h1> Artista 1 </h1>
+                        
+                </div>
+                <div id="parrafo_artista1">
+                    <h4>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at justo nec erat porttitor hendrerit in at eros. <br/>
+                        Sed id suscipit eros. <br/>
+                        Ut luctus, eros fringilla pellentesque malesuada,<br/>
+                        dui magna facilisis orci, in sollicitudin enim nibh ac neque. <br/>
+                         Aliquam id nibh orci. Pellentesque viverra lectus a velit vehicula, <br/>
+                        non consequat lorem laoreet. Donec vel nulla ligula.<br/>
+                        Curabitur eget quam quis libero finibus mollis a id ex. <br/>
+                        Etiam eu molestie velit, vitae tincidunt nisi. In eu efficitur purus, imperdiet pulvinar sem.<br/>
+                        Nulla orci metus, posuere quis sapien vel, ultrices sollicitudin mi. <br/> 
+                        Etiam tempus in augue in varius. Curabitur pulvinar metus quis arcu hendrerit, sed sodales arcu imperdiet. <br/> 
+                        Phasellus ornare rhoncus erat eleifend dictum. <br/> 
+                        
+                        
+                    </h4>
+
+                </div>
+                <div id="foto_artista">
+                    <img src="art1.jpg" class="img-thumbnail" alt="art1">
+
+                </div>
+                <div id="volver">
+                    <a href="index.html" class="btn btn-info" role="button">Volver</a>
+                </div>
+                
+                </div>
+                
+                                
+    </div>
+    </div>
+
+                
+</body>
+</html>

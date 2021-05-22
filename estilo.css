@@ -6,6 +6,10 @@
     background-color: black;
     
 }
+#map{
+	height: 500px;
+	width: 100%;
+}
 #pls{
     display: none;
     text-decoration: none;
@@ -110,6 +114,13 @@ hr.linea2 {
     margin-top: 38%;
     position: absolute;
     left: 5%;
+    
+}
+#ubicacion{
+    margin-top: 38%;
+    position: absolute;
+    left: 47%;
+    width: 75px; height: 75px;
     
 }
 #formulario{

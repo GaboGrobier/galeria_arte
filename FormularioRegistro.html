@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+    <title>Formulario</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <script>
+        $(function() 
+         {
+            $("#mi-registro").validate(
+                {
+                     rules:{
+                        name:{
+                            required: true,
+                            name: true
+                         },
+
+                        apellido:{
+                            required: true,
+                            apellido: true
+                         },
+
+
+                        email:{
+                            required: true,
+                            email: true
+                         },
+
+                         password: "required",
+                         password2: {
+                            required: true,
+                            equalTo: "#password"
+                         }
+
+                     },
+                     messages: {
+                        name: {
+                            required: 'Ingrese Nombre',
+                            name: 'formato incorrecto'
+                         },
+                         apellido: {
+                            required: 'Ingrese Apellido',
+                            apellido: 'formato incorrecto'
+                         },
+
+                         email: {
+                            required: 'Ingrese Correo Electrónico',
+                            email: 'formato incorrecto'
+                         },
+                         password: {
+                            required: 'Ingrese Contraseña',
+                            minlength: 'largo insuficiente'
+                         },
+                         password2: {
+                            required: 'Reingrese Contraseña',
+                            equalTo: 'las contraseñas no coinciden',
+                            minlength: 'largo insuficiente'
+                         }
+                     }
+                 }
+             );
+         }
+         );
+
+    </script>
+
+    <script>
+        function alerta() {
+          alert("Se ha registrado exitosamente ");
+        }
+        </script>
+
+
+
+    <form action="#" id="mi-registro">
+        <section class="formulario">
+            <h4>Registro</h4>
+            <label for="">Nombre:</label>
+            <input type="text" name="name" id="name" class="inputs" placeholder="Nombre">
+
+            <label for="">Apellido:</label>
+            <input type="text" name="apellido" id="apellido" class="inputs" placeholder="Apellido">
+
+            <label for="">Correo Electronico:</label>
+            <input type="email" name="email" id="email" class="inputs" placeholder="Correo electrónico">
+
+            <label for="">Contraseña</label>
+            <input type="password" name="password" id="password" minlength="8" class="inputs" placeholder="Contraseña">
+
+            <label for="">Repita Contraseña</label>
+            <input type="password" name="password2" id="password2" minlength="8" class="inputs" placeholder="Confirmar Contraseña">
+
+            <input type="checkbox" name="terms" id="terms"><span> Aceptar los <a href="">Términos y Condiciones</a></span>
+            <button onclick="alerta()">Registrarse</button>
+        </section>
+    </form>
+    
+</body>
+</html>

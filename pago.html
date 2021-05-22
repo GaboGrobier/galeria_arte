@@ -4,65 +4,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="estilo.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" href="pago.css">
     <title>Formulario Pago </title>
     <script>
-        $(function(){
-            $("#formulario_pago").validate(
+        $(function()
+        {
+            $("#fpago").validate(
                 {
                     rules:{
-                        nombre:{
-                            required:true
-
-                        },
-                        direccion:{
-                            required:true
-                        },
-                        pago:{
-                            required:true
-                        },
-                        numerotarjeta:{
-                            required:true
-                        },
-                        CD:{
-                            required:true
-                        }
-
+                        nombre:"required",
+                        direccion: "required",
+                        numerotarjeta:"required",
+                        CD:"required"
+  
                     },
                     messages:{
                         nombre:{
-                            required:'Debe ingresar un nombre ',
-                            minlength:'Debe ser un nombre minimo 8 caracteres'
-
-                        },
+                            required: 'Ingrese nombre completo ',
+                            minlength:'ingrese su nombre completo por favor '
+                            },
                         direccion:{
-                            required:'Debe ingresar una direccion',
-                            minlength:'debe ingresar una direccion valida '
-                        },
-                        pago:{
-                            required:'debe seleccionart una opcion '
+                            required: 'Favor ingrese una direccion',
+                            minlength: 'Direccion invalida , largo insuficiente  '
 
-                        },
-                        numerotarjeta:{
-                            required:'debe ingresar un numero de tarjeta ',
-                            minlength:'debe ser un numero de tarjeta valido '
+                            },
+                        NT:{
+                            required:'ingrese un numero de tarjeta ',
+                            minlength:'Ingrese una tarjeta valida '
 
-                        },
+                            },
                         CD:{
-                            required:'debe agregar un codigo de seguridad '
-
+                            required:'Debe ingresar en numero de seguridad de la tarjeta '
+                            }
                         }
-
-                    }
                 }
             );
         }
+        
         );
-
+    </script>
+    <script type="text/javascript">
 
 
 
@@ -71,22 +60,22 @@
 <body>
     <div class="container">
         <div class="t_pagoOnline">
-            <form action="#" id="formulario_pago">      
-                <label class="labelform" for="">Nombre Completo </label>
-                <input class="inputform" type="text" name="nombre" id="nombre" placeholder="Escriba su nombre completo" minlength="8" maxlength="30">
-                <label class="labelform" for="">Direccion</label>
-                <input class="inputform" type="text" name="direccion" id="direccion" minlength="8" maxlength="30">
-                <label class="labelform" for="pago">Metodo de pago</label>
+            <form action="#" id="fpago">      
+                <label for="">Nombre Completo </label>
+                <input type="text" name="nombre" id="nombre" placeholder="Escriba su nombre completo" minlength="8" maxlength="30">
+                <label for="">Direccion</label>
+                <input type="text" name="direccion" id="direccion" minlength="8" maxlength="30">
+                <label for="pago">Metodo de pago</label>
                     <select style="float: left;" name="pago" id="pago">
                         <option value="Mastercard">Mastercar</option>
                         <option value="Visa">Visa</option>
                     </select>
-                <label class="labelform" for="NumeroT">Ingrese el numero de tarjeta </label>
-                <input class="inputform" type="text" name="NumeroTarjeta" id="numerotarjeta" maxlength="12">
-                <label class="labelform" for="CodigoSeguridad"> Ingrese el codigo de seguridad de 3 digitos </label>
-                <input class="inputform"  type="password" id="CD" maxlength="3">
-                <label class="labelform" for="precio">Valor</label>
-                <input class="inputform" type="number" value="200" disabled>
+                <label for="NumeroT">Ingrese el numero de tarjeta </label>
+                <input type="number" name="NT" id="NT" minlength="6" maxlength="12">
+                <label for="CodigoSeguridad"> Ingrese el codigo de seguridad de 3 digitos </label>
+                <input type="password" id="CD" maxlength="3">
+                <label for="precio">Valor</label>
+                <input type="number" value="200" disabled>
                 <button>Enviar</button>
             </form>
         </div>

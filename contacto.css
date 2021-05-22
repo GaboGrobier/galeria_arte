@@ -1,0 +1,56 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(fondo\ css.jpg);
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    margin: 0;
+    font-family: monospace;
+}
+
+form{
+    width: 450px;
+    margin: auto;
+    background: rgba(0, 0, 0, 0, 4);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    border-radius: 7px;
+
+}
+h3{
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    font-size: 30px;
+    margin-bottom: 20px;
+
+}
+
+input{
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 7px;
+}
+label{
+    color: #fff;
+    clear: both;
+    float: left;
+    width: 180px;
+}
+button{
+    clear: both;
+    float: left;
+    width: 50px;
+}
+.error-control{
+    border: 1px solid red;
+}
+label.error{
+    color: red;
+    width: 200px;
+    font-size: 0.8em;
+    margin-bottom: 10px;
+    margin-top: -5px;
+
+}

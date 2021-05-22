@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validacion de formulario con JQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+    <link rel="stylesheet" href="contacto.css">
+</head>
+<body>
+    <script>
+           $(function() 
+            {
+               $("#mi-formulario").validate(
+                   {
+                        rules:{
+                            name:{
+                               required: true,
+                               name: true
+                            },
+                            apellido:{
+                               required: true,
+                               apellido: true
+                            },
+                            rut:{
+                               required: true,
+                               rut: true
+                            },
+                            email:{
+                               required: true,
+                               email: true
+                            },
+                            
+                            telefono:{
+                               required: true,
+                               telefono: true
+                            },
+
+                            comuna:{
+                               required: true,
+                               ciudad: true
+                            },
+                            Region:{
+                               required: true,
+                               Region: true
+                            },
+
+                        },
+                        messages: {
+                            name: {
+                               required: 'Ingrese Nombre',
+                               name: 'Formato Incorrecto'
+                            },
+                            apellido: {
+                               required: 'Ingrese Apellidos',
+                               apellido: 'Formato Incorrecto'
+                            },
+                            rut: {
+                               required: 'Ingrese Rut',
+                               rut: 'Formato Incorrecto'
+                            },
+                            email: {
+                               required: 'Ingrese Correo Electrónico',
+                               email: 'Formato Incorrecto'
+                            },
+                            
+                            telefono:{
+                                required: 'Ingrese el Telefono',
+                                minlength: 'Largo Insuficiente'
+                            },
+                            comuna: {
+                               required: 'Ingrese Comuna',
+                               ciudad: 'Formato Incorrecto'
+                            },
+
+                             Region: {
+                               required: 'Ingrese Region',
+                               Region: 'Formato Incorrecto'
+                            },
+
+                        }
+                    }
+                );
+            }
+            );
+
+    </script>
+
+    <form action="#" id="mi-formulario">
+        <h3>Formulario de contacto</h3>
+
+        
+        <label for="">Nombre:</label>
+        <input type="text" id="name" name="name" pattern="[a-za-Z]+" placeholder="Nombre">
+
+        <label for="">Apellidos:</label>
+        <input type="text" id="apellido" name="apellido" pattern="[a-za-Z]+" placeholder="Apellidos">
+        
+        <label for="">Rut:</label>
+        <input type="text" id="rut" name="rut" placeholder="Rut">
+
+        <label for="">Correo Electronico:</label>
+        <input type="text" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="correo@correo.cl">
+
+        <br><label for="telefono">Telefono:</label>
+        <input type="text" name="telefono" id="telefono" pattern="[0-9]+" minlength="9" placeholder="Telefono" ><br>
+
+         <label for="Region">Region:</label>
+         <input type="text" id="Region" name="Region" pattern="[a-za-Z]+" list="regionlist" placeholder="Region" >
+         <datalist id=regionlist>
+            <option value="Tarapacá">Tarapaca</option>
+            <option value="Antofagasta">Antofagasta</option>
+            <option value="Atacama">Atacama</option>
+            <option value="Coquimbo">Coquimbo</option>
+            <option value="Valparaiso">Valparaiso</option>
+            <option value="O'Higgins">O'Higgins</option>
+            <option value="Del Maule">Del Maule</option>
+            <option value="Del BioBío">Del BioBío</option>
+            <option value="La Araucanía">La Araucanía</option>
+            <option value="Los Lagos">Los Lagos</option>
+            <option value="Aysén">Aysén</option>
+            <option value="Magallanes">Magallanes</option>
+            <option value="Metropolitana">Metropolitana</option>
+            <option value="De los Ríos">De los Ríos</option>
+            <option value="de Arica y P.">de Arica y P.</option>
+            <option value="De Ñuble">De Ñuble</option>
+
+         </datalist>
+        <label for="Comuna">Comuna:</label>
+        <input type="text" id="comuna" name="comuna" pattern="[a-za-Z]+" placeholder="Comuna" ><br>
+
+        <br><label for="mensaje">Comentario:</label><br>
+        <textarea name="mensaje" id="mensaje" cols="40" rows="10" maxlength="100" placeholder="Ingrese Comentario"></textarea><br>
+        <input type="reset" value="Limpiar">
+        <input type="submit" value="Enviar Formulario">
+
+    </form>
+</body>
+</html>
